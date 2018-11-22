@@ -4,7 +4,7 @@ def calendar(list):
     lenght_of_my_list = len(list)
 
     elem = 0
-    while elem < lenght_of_my_list - 1:
+    while elem < lenght_of_my_list:
         next_elem = elem + 1
         while next_elem < lenght_of_my_list:
             if list[elem][right_elem] > list[next_elem][right_elem]:
@@ -23,6 +23,5 @@ def calendar(list):
     return list
 
 
-my_tuple = [(1, 3), (7, 9), (2, 6), (12, 16)]
-
+my_tuple = [(0, 1), (3, 5), (4, 8), (9, 10), (10, 12)]
 print(calendar(my_tuple))
