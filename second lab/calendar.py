@@ -7,11 +7,11 @@ def calendar(list):
     while elem < lenght_of_my_list:
         next_elem = elem + 1
         while next_elem < lenght_of_my_list:
-            if list[elem][right_elem] > list[next_elem][right_elem]:
+            if list[elem][right_elem] > list[next_elem][right_elem]:  #перевіряємо чи більша права частина елемента від правої частини наступного елемента
                 list.pop(next_elem)
                 lenght_of_my_list -= 1
             else:
-                if list[elem][right_elem] < list[next_elem][left_elem]:
+                if list[elem][right_elem] < list[next_elem][left_elem]:  #перевіряємо чи права частина елемента менша за ліву частину наступного елемента
                     next_elem += 1
                     continue
                 else:
@@ -23,5 +23,5 @@ def calendar(list):
     return list
 
 
-my_tuple = [(0, 1), (3, 5), (4, 8), (9, 10), (10, 12)]
+my_tuple = [(0, 1), (3, 5), (4, 8), (9, 11), (10, 12)]
 print(calendar(my_tuple))
